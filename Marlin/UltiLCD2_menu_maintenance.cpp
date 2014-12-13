@@ -225,11 +225,11 @@ void lcd_menu_maintenance_advanced_bed_heatup()
 {
     if (lcd_lib_encoder_pos / ENCODER_TICKS_PER_SCROLL_MENU_ITEM != 0)
     {
-        target_temperature_bed = int(target_temperature_bed) + (lcd_lib_encoder_pos / ENCODER_TICKS_PER_SCROLL_MENU_ITEM);
-        if (target_temperature_bed < 0)
+//        target_temperature_bed = int(target_temperature_bed) + (lcd_lib_encoder_pos / ENCODER_TICKS_PER_SCROLL_MENU_ITEM);
+//        if (target_temperature_bed < 0)
+//            target_temperature_bed = 0;
+//        if (target_temperature_bed > BED_MAXTEMP - 15)
             target_temperature_bed = 0;
-        if (target_temperature_bed > BED_MAXTEMP - 15)
-            target_temperature_bed = BED_MAXTEMP - 15;
         lcd_lib_encoder_pos = 0;
     }
     if (lcd_lib_button_pressed)
